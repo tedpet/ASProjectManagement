@@ -17,8 +17,8 @@ import er.extensions.eof.ERXFetchSpecification;
 import er.extensions.eof.ERXSortOrdering.ERXSortOrderings;
 
 public class Reports {
+
 	private static File reportFile;
-	
 	
 	public static Callable<File> createProjectReportForAE(Person anAE) {
 		EOEditingContext ec = ERXEC.newEditingContext();
@@ -27,24 +27,35 @@ public class Reports {
 		TPJRFetchSpecificationReportTask reportTask = null;
 		try {
 			
-			ERXSortOrderings sortOrderings = Project.CLIENT.dot(Client.CLIENT_NAME.ascs());
-			EOQualifier qualifier = Project.COMPLETE.eq(false).and(Project.CLIENT.dot(Client.ACCOUNT_EXEC.eq(anAE)));
-
+			EOQualifier qualifier = null;
+			String reportDescription = null;
+			
+			ERXSortOrderings sortOrderings = Project.CLIENT.dot(Client.CLIENT_NAME.ascs()).then(Project.JOB_NUMBER.asc());
+			
+			if(anAE != null) {
+				qualifier = Project.COMPLETE.eq(false).and(Project.CLIENT.dot(Client.ACCOUNT_EXEC.eq(anAE)));
+			} else  {
+				qualifier = Project.COMPLETE.eq(false);
+			}
+						
 			ERXFetchSpecification<Project> fs = new ERXFetchSpecification<Project>(Project.ENTITY_NAME, qualifier, sortOrderings);
-
-			String reportDescription = "Open Project(s) for " + anAE.fullName();
+			
+			if(anAE != null) {
+				reportDescription= "Open Project(s) for " + anAE.fullName();
+			} else {
+				reportDescription = "Open Project(s) for All AEs";
+			}
 
 			HashMap<String, Object> parameters = new HashMap<String, Object>();
 			parameters.put("reportDescription", reportDescription);
 
 			reportTask = new TPJRFetchSpecificationReportTask(fs, "ProjectReportForAE.jasper", parameters);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 
-
 		} finally {
-			//NSLog.out.appendln("finally : "  );
+			
 			ec.unlock();
 		}
 

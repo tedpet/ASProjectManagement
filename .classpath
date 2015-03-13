@@ -38,5 +38,6 @@
 	<classpathentry kind="lib" path="Libraries/ASGothamMedium.jar"/>
 	<classpathentry kind="lib" path="Libraries/ASGothamBold.jar"/>
 	<classpathentry kind="lib" path="Libraries/ASGothamThin.jar"/>
+	<classpathentry kind="lib" path="Libraries/BentonSans.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

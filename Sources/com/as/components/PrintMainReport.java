@@ -63,7 +63,7 @@ public class PrintMainReport  extends ERD2WInspectPageTemplate {
 	 * @param selectedPerson the selectedPerson to set
 	 */
 	public void setSelectedPerson(Person selectedPerson) {
-		System.out.println("Setting SelectedPerson: " + selectedPerson.fullName());
+		//System.out.println("Setting SelectedPerson: " + selectedPerson.fullName());
 		this._selectedPerson = selectedPerson;
 	}
 	
@@ -94,8 +94,6 @@ public class PrintMainReport  extends ERD2WInspectPageTemplate {
 	    nextPageController.setDownloadFileNameForClient("Project List for AE.pdf");
 
 	    nextPage.setNextPageForResultController(nextPageController);
-
-	 
 	    
 	    return nextPage;    
 	}

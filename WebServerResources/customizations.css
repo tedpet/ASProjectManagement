@@ -82,3 +82,23 @@ th.NextProjectStepStepTextAttrColumn {
 .EditRelationshipEmbeddedProjectStepObjTable th.StepTextAttrColumn {
      width: 45%;
 }
+
+/*    */
+
+
+.PrintReportOverall {
+	position: relative;
+    margin: auto;
+    width: 70%;
+}
+
+.PrintReportMainTitle {
+	font-size: 2em;
+}
+
+#DownloadIsCompletePageContent {
+    position: relative;
+    margin: auto;
+    width: 70%;
+}
+

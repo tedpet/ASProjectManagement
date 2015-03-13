@@ -1,18 +1,18 @@
 <webobject name = "ThePageWrapper">
+<div class = "PrintReportOverall">
 
-
-This is the Print area for Project Management.
-
- 
-<br/>
+<div class="PrintReportMainTitle">Project Management Print Reports</div><br/>
+Choose an Account Exec for an individual AE account or no one for All AEs!
+<div class="PrintReportForm">
 <webobject name = "WOForm">
 <webobject name = "thePopupButton"/><webobject name = "AEObserveField"/>
 </webobject>
-
+<br/>
 <webobject name = "AEUpdateComponent">
 the person is: <wo:WOString value = "$selectedPerson.fullName"/>
 
 <webobject name = "ReportForAE">Report for Account Exec.</webobject>
 
 </webobject>
+</div></div>
 </webobject>

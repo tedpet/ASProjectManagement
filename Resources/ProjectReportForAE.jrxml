@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.0.3.final using JasperReports Library version 6.0.3  -->
-<!-- 2015-03-12T16:35:07 -->
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="MainProjectReport" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1f9f9afc-c8c0-4f18-80ff-7d1bcd8a8236">
+<!-- 2015-03-13T14:44:24 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="MainProjectReport" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="732" leftMargin="40" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1f9f9afc-c8c0-4f18-80ff-7d1bcd8a8236">
 	<property name="ireport.zoom" value="2.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
@@ -21,9 +21,9 @@
 		<groupHeader>
 			<band height="30">
 				<textField>
-					<reportElement x="0" y="0" width="129" height="20" uuid="9a2efd58-e098-47de-88c0-063b00e9e7cd"/>
+					<reportElement x="0" y="0" width="143" height="20" uuid="9a2efd58-e098-47de-88c0-063b00e9e7cd"/>
 					<textElement>
-						<font fontName="ASHelveticaNeueMedium"/>
+						<font fontName="BentonSans Bold" size="12"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{client.clientName}]]></textFieldExpression>
 				</textField>
@@ -42,35 +42,38 @@
 					<text><![CDATA[Description]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="173" y="18" width="100" height="12" uuid="c601bf7b-37c6-431f-9a6b-acc4ba9c94bc"/>
+					<reportElement x="173" y="8" width="67" height="22" uuid="c601bf7b-37c6-431f-9a6b-acc4ba9c94bc">
+						<property name="local_mesure_unitheight" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
 					<textElement>
 						<font fontName="ASGothamBold" size="10"/>
 					</textElement>
 					<text><![CDATA[Project Due Date]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="270" y="18" width="100" height="12" uuid="644a235d-3046-44cf-b9ed-09734baaff80"/>
+					<reportElement x="260" y="18" width="100" height="12" uuid="644a235d-3046-44cf-b9ed-09734baaff80"/>
 					<textElement>
 						<font fontName="ASGothamBold" size="10"/>
 					</textElement>
 					<text><![CDATA[Status]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="416" y="18" width="100" height="12" uuid="68e4b90d-e188-4b86-a1f0-6293e0dfd7b0"/>
+					<reportElement x="406" y="18" width="100" height="12" uuid="68e4b90d-e188-4b86-a1f0-6293e0dfd7b0"/>
 					<textElement>
 						<font fontName="ASGothamBold" size="10"/>
 					</textElement>
 					<text><![CDATA[Assigned To]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="508" y="18" width="100" height="12" uuid="ef6c1964-1e7e-4efd-a2f0-eeb2947db997"/>
+					<reportElement x="498" y="18" width="100" height="12" uuid="ef6c1964-1e7e-4efd-a2f0-eeb2947db997"/>
 					<textElement>
 						<font fontName="ASGothamBold" size="10"/>
 					</textElement>
 					<text><![CDATA[Next Step]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="653" y="18" width="100" height="12" uuid="d9b5a3e1-00d6-46b3-8e16-5446bc0077ed"/>
+					<reportElement x="644" y="18" width="100" height="12" uuid="d9b5a3e1-00d6-46b3-8e16-5446bc0077ed"/>
 					<textElement>
 						<font fontName="ASGothamBold" size="10"/>
 					</textElement>
@@ -83,7 +86,7 @@
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="54" splitType="Stretch">
+		<band height="51" splitType="Stretch">
 			<textField>
 				<reportElement x="0" y="15" width="663" height="36" forecolor="#FF3333" uuid="4aedc5fd-c98c-43ae-9ad0-f0fb12d855ce"/>
 				<textElement>
@@ -98,68 +101,132 @@
 			</staticText>
 		</band>
 	</title>
+	<pageHeader>
+		<band height="52">
+			<printWhenExpression><![CDATA[$V{PAGE_NUMBER}>1]]></printWhenExpression>
+			<textField>
+				<reportElement x="29" y="2" width="286" height="19" uuid="1dab46b3-316c-4a99-a615-435a262afdf8"/>
+				<textFieldExpression><![CDATA[$P{reportDescription}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="498" y="39" width="100" height="12" uuid="feaa1382-1b2c-4d92-b1ec-4d5340171a3c"/>
+				<textElement>
+					<font fontName="ASGothamBold" size="10"/>
+				</textElement>
+				<text><![CDATA[Next Step]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="39" width="57" height="12" uuid="50d71543-7b76-4f31-b8fd-1a88b6ac450d"/>
+				<textElement>
+					<font fontName="ASGothamBold" size="10"/>
+				</textElement>
+				<text><![CDATA[Job Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="644" y="39" width="100" height="12" uuid="d6020d11-a9db-4db4-bdb9-c389a3607e89"/>
+				<textElement>
+					<font fontName="ASGothamBold" size="10"/>
+				</textElement>
+				<text><![CDATA[Assigned To]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="66" y="39" width="100" height="12" uuid="e9b985e5-eaee-454e-b12d-a410b133a25a"/>
+				<textElement>
+					<font fontName="ASGothamBold" size="10"/>
+				</textElement>
+				<text><![CDATA[Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="260" y="39" width="100" height="12" uuid="75ab1d2b-e3ec-4fb8-afe9-1ae661864c65"/>
+				<textElement>
+					<font fontName="ASGothamBold" size="10"/>
+				</textElement>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="173" y="29" width="67" height="22" uuid="44533f7f-dbb0-448c-b069-824dbff7e9da">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="ASGothamBold" size="10"/>
+				</textElement>
+				<text><![CDATA[Project Due Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="406" y="39" width="100" height="12" uuid="6b8d1d6f-5ec1-4163-b645-9b1a4c1b89f5"/>
+				<textElement>
+					<font fontName="ASGothamBold" size="10"/>
+				</textElement>
+				<text><![CDATA[Assigned To]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
 	<detail>
 		<band height="25" splitType="Stretch">
 			<textField>
 				<reportElement x="66" y="0" width="105" height="20" uuid="fa8e5f30-0df2-4c52-8fe7-0cf6e7f1ee7b"/>
 				<textElement>
-					<font fontName="ASGothamMedium" size="9"/>
+					<font fontName="BentonSans Regular" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{jobDescription}]]></textFieldExpression>
 			</textField>
 			<textField pattern="MMMMM dd, yyyy">
-				<reportElement x="173" y="0" width="100" height="20" uuid="a7bd5bed-79d5-411a-9861-df0742aa2d87"/>
+				<reportElement x="173" y="0" width="79" height="20" uuid="a7bd5bed-79d5-411a-9861-df0742aa2d87"/>
 				<textElement>
-					<font fontName="ASGothamMedium" size="9"/>
+					<font fontName="BentonSans Regular" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{projectDueDate}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="416" y="0" width="100" height="20" uuid="bf4bf9de-51fa-4c6c-9312-63761ddab91b"/>
+				<reportElement x="406" y="0" width="100" height="20" uuid="bf4bf9de-51fa-4c6c-9312-63761ddab91b"/>
 				<textElement>
-					<font fontName="ASGothamMedium" size="9"/>
+					<font fontName="BentonSans Regular" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{currentProjectStep.stepAssignedTo.fullName}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="0" y="0" width="64" height="20" uuid="9d9d2bc7-557b-4f6e-b777-fc724f838105"/>
 				<textElement>
-					<font fontName="ASGothamMedium" size="9"/>
+					<font fontName="BentonSans Regular" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{jobNumber}]]></textFieldExpression>
 			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement stretchType="RelativeToBandHeight" x="270" y="0" width="140" height="20" uuid="e3edd9e8-9eab-489e-921f-795063cc5cba"/>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="260" y="0" width="146" height="20" uuid="e3edd9e8-9eab-489e-921f-795063cc5cba"/>
 				<textElement>
-					<font fontName="ASGothamMedium" size="9"/>
+					<font fontName="BentonSans Regular" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{currentProjectStep.stepText}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement stretchType="RelativeToBandHeight" x="508" y="0" width="140" height="20" uuid="66174397-d2fd-487f-a019-1ef2688629d1"/>
+				<reportElement stretchType="RelativeToBandHeight" x="498" y="0" width="145" height="20" uuid="66174397-d2fd-487f-a019-1ef2688629d1">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
 				<textElement>
-					<font fontName="ASGothamMedium" size="9"/>
+					<font fontName="BentonSans Regular" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{nextProjectStep.stepText}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="653" y="0" width="100" height="20" isRemoveLineWhenBlank="true" uuid="a5b98b25-4836-4b69-aa35-f1b77fabb5d9"/>
+				<reportElement x="644" y="0" width="100" height="20" isRemoveLineWhenBlank="true" uuid="a5b98b25-4836-4b69-aa35-f1b77fabb5d9"/>
 				<textElement>
-					<font fontName="ASGothamMedium" size="9"/>
+					<font fontName="BentonSans Regular" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{nextProjectStep.stepAssignedTo.fullName}]]></textFieldExpression>
 			</textField>
 			<textField pattern="MMM d, yyyy" isBlankWhenNull="true">
-				<reportElement x="417" y="10" width="100" height="10" uuid="386f0e85-56e7-41d1-97ed-a740254a1642"/>
+				<reportElement x="407" y="10" width="100" height="10" uuid="386f0e85-56e7-41d1-97ed-a740254a1642"/>
 				<textElement>
-					<font fontName="ASGothamMedium" size="6"/>
+					<font fontName="BentonSans Regular" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{currentProjectStep.dueDate}]]></textFieldExpression>
 			</textField>
 			<textField pattern="MMM d, yyyy" isBlankWhenNull="true">
-				<reportElement x="654" y="10" width="100" height="10" uuid="ea45dbff-7768-4744-a5dd-641a7be3c48b"/>
+				<reportElement x="645" y="10" width="100" height="10" uuid="ea45dbff-7768-4744-a5dd-641a7be3c48b"/>
 				<textElement>
-					<font fontName="ASGothamMedium" size="6"/>
+					<font fontName="BentonSans Regular" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{nextProjectStep.dueDate}]]></textFieldExpression>
 			</textField>
