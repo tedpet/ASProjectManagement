@@ -1,0 +1,10 @@
+(
+    50 : pageConfiguration = 'DownloadIsCompletePage' => task = "inspect" [com.webobjects.directtoweb.Assignment],
+    50 : pageConfiguration = 'DownloadIsCompletePage' => entity = "Person" [com.webobjects.directtoweb.EntityAssignment],
+    50 : pageConfiguration = 'DownloadIsCompletePage' => navigationState = "DownloadIsCompletePage" [com.webobjects.directtoweb.Assignment],
+    50 : pageConfiguration = 'DownloadIsCompletePage' => templateNameForInspectPage = "DownloadIsCompletePage" [com.webobjects.directtoweb.Assignment],
+    100 : pageConfiguration = 'PrintMainReport' => task = "inspect" [Assignment],
+    100 : pageConfiguration = 'PrintMainReport' => entity = "Person" [EntityAssignment],
+    100 : pageConfiguration = 'PrintMainReport' => navigationState = "Reports" [Assignment],
+    100 : pageConfiguration = 'PrintMainReport' => templateNameForInspectPage = "PrintMainReport" [Assignment]
+)

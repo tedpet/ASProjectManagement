@@ -1,0 +1,84 @@
+
+
+
+
+th.CurrentProjectStepStepTextAttrColumn {
+     width: 30%;
+}
+
+th.StepTextAttrColumn {
+     width: 40%;
+}
+
+th.CompleteAttrColumn {
+    width: 12%;
+}
+
+th.DueDateAttrColumn {
+    width: 8%;
+}
+
+th.IsHotAttrColumn {
+    width: 12%;
+}
+
+th.CurrentProjectStepDueDateAttrColumn {
+     width: 8%;
+}
+
+span.StepTextAttrVal textarea {
+    width: 300px;
+    height: 100px;
+}
+
+
+
+tr.highlightRed {
+     background-color: red;
+}
+
+.ListClientObjTable .LftActionCell {
+    width: 25px;
+}
+
+.ListProjectObjTable .LftActionCell {
+    width: 25px;
+}
+
+.ListPersonObjTable .LftActionCell {
+    width: 25px;
+}
+
+.LftActionCell {
+    width: 500px;
+}
+
+th.CurrentProjectStepDueDateAttrColumn {
+     width:6%;
+}
+
+th.CurrentProjectStepStepTextAttrColumn {
+    width: 20%;
+}
+
+th.NextProjectStepStepTextAttrColumn {
+    width: 20%;
+}
+
+/*  EditRelationshipEmbeddedProjectStepObjTable Area */
+
+.EditRelationshipEmbeddedProjectStepObjTable .LftActionCell {
+    width:30px;
+}
+
+.EditRelationshipEmbeddedProjectStepObjTable th.CompleteAttrColumn {
+    width: 18%;
+}
+
+.EditRelationshipEmbeddedProjectStepObjTable th.DueDateAttrColumn {
+    width: 20%;
+}
+
+.EditRelationshipEmbeddedProjectStepObjTable th.StepTextAttrColumn {
+     width: 45%;
+}

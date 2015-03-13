@@ -1,0 +1,7 @@
+# ASProjectManagement
+
+log4j.logger.er.directtoweb.rules.ERD2WTraceRuleFiringEnabled=DEBUG
+
+username=admin
+password=3368
+

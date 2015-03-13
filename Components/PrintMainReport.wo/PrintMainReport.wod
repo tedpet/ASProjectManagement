@@ -1,0 +1,32 @@
+ThePageWrapper : PageWrapper {
+
+}
+
+thePopupButton : WOPopUpButton {
+  id = "AEFieldID";
+  list = accountExecList;
+  item = thePerson;
+  selection = selectedPerson;  
+  displayString = thePerson.fullName;
+  noSelectionString = "No Person Selected";
+}
+
+AEObserveField : AjaxObserveField {
+	observeFieldID = "AEFieldID";
+	updateContainerID = "AEDiv1";
+	action = mainPopupAction;
+	fullSubmit = false;
+}
+
+AEUpdateComponent : AjaxUpdateContainer {
+	id = "AEDiv1";
+}
+WOForm : WOForm {
+  multipleSubmit = "true";
+}
+
+ReportForAE : CCSubmitLink {
+   action = reportForAE;
+   title = "Grid Report for Account Exec."
+   
+}

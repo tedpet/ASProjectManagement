@@ -1,0 +1,9 @@
+(
+    100 : pageConfiguration like '*Person' => navigationState = "Person" [com.webobjects.directtoweb.Assignment],
+    100 : pageConfiguration = 'ListPerson' => actions = {"left" = ("editAction"); } [com.webobjects.directtoweb.Assignment],
+    100 : pageConfiguration = 'ListPerson' => displayPropertyKeys = ("firstName", "lastName", "emailAddress") [com.webobjects.directtoweb.Assignment],
+    100 : pageConfiguration = 'QueryPerson' => displayPropertyKeys = ("firstName", "lastName", "isActive", "isAccountExec") [com.webobjects.directtoweb.Assignment],
+    100 : (pageConfiguration = 'EditPerson' and (propertyKey = 'isActive' or propertyKey = 'isAccountExec')) => componentName = "D2WEditBoolean" [com.webobjects.directtoweb.Assignment],
+    100 : (pageConfiguration = 'QueryPerson' and (propertyKey = 'isAccountExec' or propertyKey = 'isActive')) => componentName = "TPSD2WQueryBooleanComponent" [com.webobjects.directtoweb.Assignment],
+    100 : pageConfiguration = 'EditPerson' => displayPropertyKeys = ("firstName", "lastName", "loginName", "password", "emailAddress", "isActive", "isAccountExec") [com.webobjects.directtoweb.Assignment]
+)

@@ -1,0 +1,15 @@
+(
+    100 : pageConfiguration like '*Client' => navigationState = "Client" [com.webobjects.directtoweb.Assignment],
+    100 : pageConfiguration = 'ListClient' => actions = {"left" = ("editAction"); } [com.webobjects.directtoweb.Assignment],
+    100 : pageConfiguration = 'CreateClient' => displayPropertyKeys = ("clientName", "clientContact") [com.webobjects.directtoweb.Assignment],
+    100 : (pageConfiguration = 'EditClient' and propertyKey = 'isActive') => componentName = "D2WEditBoolean" [com.webobjects.directtoweb.Assignment],
+    100 : pageConfiguration = 'QueryClient' => displayPropertyKeys = ("accountExec", "clientName", "isActive") [com.webobjects.directtoweb.Assignment],
+    100 : (propertyType = 'r' and relationship.destinationEntity.name = 'Person') => keyWhenRelationship = "fullName" [com.webobjects.directtoweb.Assignment],
+    100 : (propertyType = 'r' and relationship.destinationEntity.name = 'Client') => keyWhenRelationship = "clientName" [com.webobjects.directtoweb.Assignment],
+    100 : (propertyType = 'r' and relationship.destinationEntity.name = 'AccountExec') => keyWhenRelationship = "fullName" [com.webobjects.directtoweb.Assignment],
+    100 : pageConfiguration = 'ListClient' => displayPropertyKeys = ("clientName", "clientContact", "accountExec.fullName") [com.webobjects.directtoweb.Assignment],
+    100 : (pageConfiguration = 'QueryClient' and propertyKey = 'isActive') => componentName = "TPSD2WQueryBooleanComponent" [com.webobjects.directtoweb.Assignment],
+    100 : (pageConfiguration = 'EditClient' and propertyKey = 'accountExec') => componentName = "ERD2WEditToOneRelationship" [com.webobjects.directtoweb.Assignment],
+    100 : pageConfiguration = 'EditClient' => displayPropertyKeys = ("clientName", "clientContact", "isActive", "accountExec") [com.webobjects.directtoweb.Assignment],
+    100 : (pageConfiguration = 'QueryClient' and propertyKey = 'accountExec') => componentName = "ERD2WQueryToOneRelationship" [com.webobjects.directtoweb.Assignment]
+)

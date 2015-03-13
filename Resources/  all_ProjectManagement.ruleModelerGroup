@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>modelPaths</key>
+	<array>
+		<string>user.d2wmodel</string>
+		<string>Person.d2wmodel</string>
+		<string>Project.d2wmodel</string>
+		<string>Client.d2wmodel</string>
+		<string>ProjectStep.d2wmodel</string>
+		<string>Reports.d2wmodel</string>
+	</array>
+</dict>
+</plist>

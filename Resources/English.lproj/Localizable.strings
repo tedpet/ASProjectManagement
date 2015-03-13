@@ -1,0 +1,17 @@
+{
+  "Nav.Person" = "People";
+  "Nav.Tab2" = "Tab2";
+  "Nav.Home" = "Home";
+  "Nav.Admin" = "Admin";
+  
+  "ERD2W.advancedFindButtonLabel" = "Advanced...";
+  
+  
+  "PropertyKey.currentProjectStep.stepText" = "Current Step";
+  "PropertyKey.nextProjectStep.stepText" = "Next Step";
+  "PropertyKey.currentProjectStep.stepAssignedTo.fullName" = "Assigned to";
+  "PropertyKey.nextProjectStep.stepAssignedTo.fullName" = "Assigned to";
+  
+  "PropertyKey.accountExec.fullName" = "AS Account Exec.";
+  
+}

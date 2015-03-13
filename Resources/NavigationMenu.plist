@@ -1,0 +1,84 @@
+(
+	{
+		name = Root;
+		children = ("Home","Person", "Client","Project", "Reports");
+	},
+	{
+		name = "Home";
+		action = "session.navController.homeAction";
+	},
+	{
+		name = Person;
+		action = "session.navController.personAction";
+		children = ("createPerson", "searchPerson", "Logout");
+	},
+	{
+		name = createPerson;
+		displayName = "Create Person";
+		action = "session.navController.createPersonAction";
+		//conditions = ("session.user.security.canCreateClient");
+		
+	},
+	{
+		name = searchPerson; 
+		displayName = "Search Person";
+		action = "session.navController.searchPersonAction";
+		//conditions = ("session.user.security.canCreateClient");
+		
+	},
+	{
+		name = Client;
+		action = "session.navController.clientAction";
+		children = ("createClient", "searchClient", "Logout");
+	},
+	{
+		name = createClient; 
+		displayName = "Create Client";
+		action = "session.navController.createClientAction";
+		//conditions = ("session.user.security.canCreateClient");
+		
+	},
+	{
+		name = searchClient; 
+		displayName = "Search Client";
+		action = "session.navController.searchClientAction";
+		//conditions = ("session.user.security.canCreateClient");
+		
+	},
+	{
+		name = Project;
+		action = "session.navController.projectAction";
+		children = ("createProject", "searchProject", "Logout");
+	},
+	{
+		name = createProject;
+		displayName = "Create Project";
+		action = "session.navController.createProjectAction";
+		//conditions = ("session.user.security.canCreateClient");
+		
+	},
+	{
+		name = searchProject;
+		displayName = "Search Project";
+		action = "session.navController.searchProjectAction";
+		//conditions = ("session.user.security.canCreateClient");
+		
+	},
+	{
+		name = Reports;
+		displayName = "Reports";
+		action = "session.navController.printProjectReportAction";
+		//conditions = ("session.user.security.canCreateClient");
+		children = ("Logout");
+	},
+	{
+		name = Logout;
+		directActionName = "logout";
+		/*
+		You may specify the direct action class using the
+		directActionClass binding.
+		*/
+		directActionClass = "ERXDirectAction";
+	}
+
+)
